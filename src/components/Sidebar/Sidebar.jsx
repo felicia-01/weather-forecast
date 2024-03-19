@@ -19,7 +19,7 @@ function Sidebar({ temperature, description, requiredCity, presentweather, allda
 
 
         const valuesArray = Object.values(reduced);
-        console.log(valuesArray);
+        // console.log(valuesArray);
 
         const requireddata = valuesArray.map((val, ind) => {
             return val.reduce((acc, val, ind) => {
@@ -31,10 +31,10 @@ function Sidebar({ temperature, description, requiredCity, presentweather, allda
             }, {})
         })
 
-        console.log(requireddata)
+        // console.log(requireddata)
         setreducedarray(requireddata)
 
-        console.log(reduced)
+        // console.log(reduced)
     }, [alldata]);
 
 

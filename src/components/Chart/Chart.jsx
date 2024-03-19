@@ -54,7 +54,7 @@ function Chart({ timefilter }) {
                 <div className='justify-content-center d-flex'>
                 <Line data={data} className='charts ' />
                 </div>
-                {console.log(timefilter)}
+                {/* {console.log(timefilter)} */}
             </Container>
         </>
     );

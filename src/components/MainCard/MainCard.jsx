@@ -141,9 +141,9 @@ function MainCard() {
                     }
                 });
                 setSameNameCitites(response.data)
-                console.log(response.data);
+                // console.log(response.data);
             } catch (error) {
-                console.log(error);
+                // console.log(error);
             }
         }
         fetchCities()
@@ -188,7 +188,7 @@ function MainCard() {
                         appid: 'eb1ace0f7cc8f7c2f136f97bccdc122e'
                     }
                 })
-                console.log(response.data.list)
+                // console.log(response.data.list)
                 setweatherdata(response.data.list)
                 setTemperature(weatherTimeFilter[0].main.temp)
 
@@ -210,7 +210,7 @@ function MainCard() {
         const month = months[currentDate.getMonth()];
         const day = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][currentDate.getDay()];
         const formattedDateTime = `${date} ${month} ${day}`;
-        console.log(formattedDateTime);
+        // console.log(formattedDateTime);
         setPresentDate(formattedDateTime);
     }, [])
 
@@ -231,7 +231,7 @@ function MainCard() {
     }, [weatherdata]);
     
     
-    let weatherTimeFilter = weatherfilter.filter((val, ind) => {
+    let weatherTimeFilter = weatherfilter.filter((val) => {
         // Extract date and time parts from val.dt_txt
         const [datePart, timePart] = val.dt_txt.split(' ');
         const [year, month, day] = datePart.split('-');
@@ -246,7 +246,7 @@ function MainCard() {
 
 
     useEffect(()=>{
-        let weatherTimeFilterforCharted = weatherdata.filter((val, ind) => {
+        let weatherTimeFilterforCharted = weatherdata.filter((val) => {
             // Extract date and time parts from val.dt_txt
             const [datePart, timePart] = val.dt_txt.split(' ');
             const [year, month, day] = datePart.split('-');
@@ -275,8 +275,8 @@ function MainCard() {
     }, [weatherTimeFilter]);
 
 
-    console.log(weatherfilter)
-    console.log(weatherdata)
+    // console.log(weatherfilter)
+    // console.log(weatherdata)
     return <>
         <div className='d-flex  flex-md-row-reverse'>
             <Sidebar temperature={temperature} description={description} requiredCity={requiredCity} presentweather={weatherTimeFilter[weatherTimeFilter.length - 1]}  alldata={weatherdata}/>
@@ -315,8 +315,6 @@ function MainCard() {
                                                     </li>;
                                                 })}
                                             </ul>
-                                            {console.log(sameNameCities)}
-
                                         </>
 
                                     }
@@ -334,8 +332,6 @@ function MainCard() {
                                     <h6>Weather Forecast</h6>
                                     <h3>{description}</h3>
                                     <h3>{(temperature - 273.15).toFixed(2)}&deg; C</h3>
-                                    {/* {console.log(weatherfilter)} */}
-                                    {/* {console.log(temperature)} */}
                                 </div>
                             </div>
                         </div>
