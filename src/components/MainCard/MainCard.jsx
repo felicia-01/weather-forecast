@@ -133,7 +133,7 @@ function MainCard() {
     useEffect(() => {
         const fetchCities = async () => {
             try {
-                const response = await axios.get('http://api.openweathermap.org/geo/1.0/direct', {
+                const response = await axios.get('https://api.openweathermap.org/geo/1.0/direct', {
                     params: {
                         q: cityName,
                         limit: 5,
