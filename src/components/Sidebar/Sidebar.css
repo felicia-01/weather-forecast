@@ -1,0 +1,12 @@
+.sidebar{
+    background: linear-gradient(to bottom,#010834, #04297A, #072B82, #010834);
+}
+
+.cloudImg{
+   width: 30%;
+}
+
+table *{
+    background-color: transparent !important;
+    color: white !important;
+}

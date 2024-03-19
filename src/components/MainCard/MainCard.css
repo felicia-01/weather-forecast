@@ -1,0 +1,74 @@
+.inner-part {
+    background-image: url('../../assets/Home/peakpx.jpg');
+    background-size: cover;
+    height: 70vh;
+    width: 99%;
+    margin-top: 1.5%;
+    border-radius: 20px;
+}
+
+.input-field {
+    background-color: rgb(1, 3, 44) !important;
+    color: white !important;
+}
+
+
+.input-field::placeholder {
+    color: white !important;
+    opacity: 0.6 !important;
+}
+
+.weather-details{
+    color: white;
+    width: 100%;
+}
+
+.card-details{
+    margin: 50px;
+    /* margin-right: 150px; */
+}
+
+.cloud{
+    width: 17%;
+}
+
+.input-group{
+    width: 70% !important;
+}
+
+.left-side{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-center; */
+}
+
+.dropdown .address{
+    font-size: 0.7em;
+}
+
+.dropdown .lanlon{
+    font-size: 0.5em;
+}
+
+.cityname{
+    font-size: 1.5em;
+}
+
+.dropdown *{
+    cursor: pointer;
+}
+
+.dropdown:hover{
+    background-color: rgb(209, 207, 207);
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .left-side{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cloud{
+        display:none;
+    }
+}
